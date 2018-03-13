@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap4</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
+</head>
+<body>
+<!--this summer-note is without bootstrap, light-summernote-->
+<!--https://summernote.org/getting-started/#run-summernote-->
+<div id="summernote"></div>
+<button onclick="saveEdit()">Save</button>
+<button>Cancel</button>
+<pre>
+var sHTML = $('.summernote').code();
+Get the HTML content of the second summernote with jQuery eq.
+
+var sHTML = $('.summernote').eq(1).code();
+A string of HTML to set as the content of each matched element.
+
+$('.summernote').code(sHTML);
+</pre>
+<!--image api example-->
+<!--https://summernote.org/deep-dive/#onimageupload-->
+<!--https://itsolutionstuff.com/post/how-to-add-custom-jquery-validation-for-image-file-upload-in-summernote-example.html-->
+<script>
+    $('#summernote').summernote({
+        tabsize: 2,
+        height: 500
+    });
+
+    function saveEdit(){
+    var editData =  $('#summernote').summernote('code');
+    console.log(editData);
+    }
+</script>
+</body>
+</html>
