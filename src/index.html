@@ -12,18 +12,43 @@
 <body>
 <!--this summer-note is without bootstrap, light-summernote-->
 <!--https://summernote.org/getting-started/#run-summernote-->
-<div id="summernote">
+<div class="container" style="min-width: 50%">
+    <div>
+        <input type="text">
+    </div>
+    <div>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+        <!--taggle.js-->
+    <div id="tags">
+    </div>
+        <!--summer-note.js-->
+    <div id="summernote">
 
-</div>
-<div id="app">
-    <!--<textarea style="width: 100%; height: 500px">{{$data.pre}}</textarea>-->
-    <textarea id="pre-data" style="width: 100%; height: 500px"></textarea>
+    </div>
+    <div id="app">
+        <!--<textarea style="width: 100%; height: 500px">{{$data.pre}}</textarea>-->
+        <textarea id="pre-data" style="width: 100%; height: 500px"></textarea>
+    </div>
 </div>
 <button onclick="saveEdit()">Save</button>
 <button>Cancel</button>
+
+
+
+
+<script src="../node_modules/taggle/src/taggle.js"></script>
+
 <!--image api example-->
 <!--https://summernote.org/deep-dive/#onimageupload-->
 <!--https://itsolutionstuff.com/post/how-to-add-custom-jquery-validation-for-image-file-upload-in-summernote-example.html-->
+
+<!--summernote font-family add-->
+<!--https://www.youtube.com/watch?v=kBfJqzmFa6w&feature=youtu.be&a=-->
 <script>
     'use strict'
     // this is with vuejs
@@ -33,6 +58,13 @@
     //         pre: ''
     //     }
     // })
+
+
+    const tags = new Taggle('tags', {
+        onTagAdd : function(e,tag){
+            console.log(tag);
+        }
+    })
 
     const summer = $('#summernote');
 

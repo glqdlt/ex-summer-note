@@ -1,0 +1,22 @@
+{
+  "name": "ex-summer-note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glqdlt/ex-summer-note.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glqdlt/ex-summer-note/issues"
+  },
+  "homepage": "https://github.com/glqdlt/ex-summer-note#readme",
+  "dependencies": {
+    "taggle": "^1.13.0"
+  }
+}
