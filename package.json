@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/glqdlt/ex-summer-note#readme",
   "dependencies": {
+    "datatables.net": "^1.10.16",
     "jquery": "^3.3.1",
     "summernote": "^0.8.10",
     "taggle": "^1.13.0"
