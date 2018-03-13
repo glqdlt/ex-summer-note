@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bootstrap4</title>
+    <title>ex-summer-note</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
@@ -13,15 +13,6 @@
 <div id="summernote"></div>
 <button onclick="saveEdit()">Save</button>
 <button>Cancel</button>
-<pre>
-var sHTML = $('.summernote').code();
-Get the HTML content of the second summernote with jQuery eq.
-
-var sHTML = $('.summernote').eq(1).code();
-A string of HTML to set as the content of each matched element.
-
-$('.summernote').code(sHTML);
-</pre>
 <!--image api example-->
 <!--https://summernote.org/deep-dive/#onimageupload-->
 <!--https://itsolutionstuff.com/post/how-to-add-custom-jquery-validation-for-image-file-upload-in-summernote-example.html-->
@@ -32,8 +23,8 @@ $('.summernote').code(sHTML);
     });
 
     function saveEdit(){
-    var editData =  $('#summernote').summernote('code');
-    console.log(editData);
+        var editData =  $('#summernote').summernote('code');
+        console.log(editData);
     }
 </script>
 </body>
